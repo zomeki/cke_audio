@@ -1,6 +1,6 @@
 ﻿ /*
  * @file Audio plugin for CKEditor
- * This is only an adaptation of Video plugin for CKEditor created by Alfonso Martínez de Lizarrondo
+ * This is only an adaptation of Video plugin for CKEditor created by Alfonso Martinez de Lizarrondo
  * Adapted by Philippe Jeoris
  *
  * == BEGIN LICENSE ==
@@ -26,7 +26,7 @@
 CKEDITOR.plugins.add( 'audio',
 {
 	// Translations, available at the end of this file, without extra requests
-	lang : [ 'en', 'fr' ],
+	lang : [ 'en', 'fr', 'ja' ],
 
 	getPlaceholderCss : function()
 	{
@@ -169,13 +169,24 @@ var en = {
 
 var fr = {
 		toolbar	: 'Audio',
-		dialogTitle : 'Propriétés du son',
+		dialogTitle : 'Proprietes du son',
 		fakeObject : 'Audio',
 		properties : 'Edition du son',
 		sourceAudio: 'Source du son',
 		sourceType : 'Type',
 		linkTemplate :  '<a href="%src%">%type%</a> ',
-		fallbackTemplate : 'Votre navigateur ne supporte pas la balise audio.<br>Merci, de télécharger le fichier: %links%'
+		fallbackTemplate : 'Votre navigateur ne supporte pas la balise audio.<br>Merci, de telecharger le fichier: %links%'
+	};
+
+var ja = {
+		toolbar : 'オーディオ',
+		dialogTitle : 'オーディオのプロパティ',
+		fakeObject : 'オーディオ',
+		properties : '編集',
+		sourceAudio: 'URL',
+		sourceType : '種別',
+		linkTemplate :  '<a href="%src%">%type%</a> ',
+		fallbackTemplate : 'お使いのブラウザはオーディオをサポートしていません。<br>次のリンクからファイルをダウンロードしてください： %links%'
 	};
 
 	// v3
@@ -183,11 +194,14 @@ var fr = {
 	{
 		en = { audio : en} ;
 		fr = { audio : fr} ;
+		ja = { audio : ja} ;
 	}
 
 // Translations
 CKEDITOR.plugins.setLang( 'audio', 'en', en );
 
 CKEDITOR.plugins.setLang( 'audio', 'fr', fr );
+
+CKEDITOR.plugins.setLang( 'audio', 'ja', ja );
 
 })();
